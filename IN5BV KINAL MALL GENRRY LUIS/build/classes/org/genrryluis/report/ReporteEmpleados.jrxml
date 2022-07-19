@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleados" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc234816-d6de-4c23-9d87-508385fc4620">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="64"/>
+	<property name="ireport.y" value="106"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<parameter name="LOGO_DETAIL" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[CALL sp_ReporteEmpleados();]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaContratacion" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sueldo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="cargos" class="java.lang.String"/>
+	<field name="horarioEntrada" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="801" height="27" uuid="8678b7fd-01c1-4838-b151-2ac931bf988f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="27" width="801" height="18" uuid="8db85810-16c7-4497-81ae-c8fe3161726e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6A Avenida 13-54, Colonia Landivar, Zona 7, Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="45" width="801" height="20" uuid="e3207dd4-3b88-4556-8cf5-6ea225d26026"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono: 22060000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="65" width="801" height="20" uuid="660d6900-0386-477b-97be-8806100daacc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIT: 5696565-7]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="650" y="102" width="107" height="20" uuid="fa749d6f-67b7-4bdd-a3b6-f78cb0d19404"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="661" y="0" width="141" height="86" uuid="bfc7f4a2-8301-4c7e-b7b6-0d2dbd6cb394"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-21" y="-17" width="200" height="82" uuid="d98e6b18-5950-425e-ac8f-f1e0bd7a84fa"/>
+				<imageExpression><![CDATA[$P{LOGO_DETAIL}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45">
+			<staticText>
+				<reportElement x="1" y="0" width="801" height="36" uuid="4d07a848-27a1-4dd7-a830-38124f147dc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPLEADOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="41" width="801" height="1" uuid="d946d3e5-2650-4198-850d-947f274e8c01"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="2" width="27" height="20" uuid="8e36b7c3-0eb4-4d17-ba85-e946099b0a86"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="1" width="47" height="20" uuid="9967039f-2357-49be-b037-b4f4043f0981"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="2" width="50" height="20" uuid="718eb353-f220-4334-b248-b457e510a641"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="2" width="65" height="20" uuid="c2daa5e9-9834-4248-9d5f-758d17647c0c"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="2" width="93" height="20" uuid="ebbf57c3-05c9-4aca-b606-d3bf8e50942e"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FechaContratacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="2" width="56" height="20" uuid="0756e141-b2cf-405d-beb6-c07d4db67390"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="2" width="81" height="20" uuid="745f0bfa-ce79-4862-91f6-79b84828120f"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="2" width="65" height="20" uuid="a9ea31ec-e885-40cc-ab4b-ab3d084271b7"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="2" width="84" height="20" uuid="074a1485-59fc-4224-9cae-ac2117f931b4"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HorarioEntrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="2" width="75" height="20" uuid="ae2acb17-5eb7-46f5-a1f2-3180423e34fd"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HorarioSalida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="2" width="49" height="20" uuid="6a0d3dce-00af-43ed-aaeb-5cd7fcf01b38"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="4" y="5" width="797" height="20" forecolor="#CCCCCC" uuid="b2c81eae-6b1d-4d40-ba0a-c3ec5a78dbb4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="14" y="5" width="27" height="20" uuid="337782ad-1870-48cf-b316-a4ec97c5ad6b"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="6" width="60" height="20" uuid="ed616903-791e-4ca3-8901-536af7cf86ca"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="5" width="111" height="20" uuid="f5156609-5eaf-4472-9478-9b23ac5bd56e"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="5" width="70" height="20" uuid="39bc8d26-1167-4665-81a9-c54589548d34"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="280" y="5" width="72" height="20" uuid="35c6c90b-c562-4bf0-aff8-6f0e3062d76e"/>
+				<textFieldExpression><![CDATA[$F{fechaContratacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="6" width="63" height="20" uuid="1607e4d8-6988-466a-9e66-11c92113250b"/>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="5" width="70" height="20" uuid="7dabd649-121d-40ed-b6a3-ef4709489a61"/>
+				<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="5" width="65" height="20" uuid="554cbb12-2b4e-4681-ad15-cc2155c5aa4a"/>
+				<textFieldExpression><![CDATA[$F{cargos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="550" y="5" width="94" height="20" uuid="27528633-08d6-4441-9c6e-57578457934a"/>
+				<textFieldExpression><![CDATA[$F{horarioEntrada}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="644" y="6" width="86" height="20" uuid="efa1e0b3-db64-4b49-914b-9c8c5eea7edf"/>
+				<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="730" y="6" width="71" height="20" uuid="208627bd-445a-44e1-8397-4045445861bf"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="96">
+			<staticText>
+				<reportElement x="1" y="10" width="801" height="63" forecolor="#000000" uuid="cecce3a7-264a-4c51-95e4-c5ff223ac8c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Genrry Uwualdo Luis Alvarado
+gluis-2020232@kinal.edu.gt
+IN5BV]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<image>
+				<reportElement x="101" y="14" width="454" height="51" uuid="9a332d89-40ab-4921-8b24-bd4d579c4a15"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="1" y="45" width="100" height="20" uuid="4b7b3320-4ec5-4dde-9b67-868c30033bd9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

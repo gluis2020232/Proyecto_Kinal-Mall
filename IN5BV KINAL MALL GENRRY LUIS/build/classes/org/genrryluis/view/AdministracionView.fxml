@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="560.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.genrryluis.controller.AdministracionController">
+   <children>
+      <Pane layoutX="220.0" prefHeight="562.0" prefWidth="847.0" style="-fx-background-color: #D3E1EB;">
+         <children>
+            <Pane layoutX="-174.0" layoutY="123.0" opacity="0.83" prefHeight="247.0" prefWidth="251.0" rotate="-130.2" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <Pane layoutX="369.0" layoutY="464.0" opacity="0.83" prefHeight="247.0" prefWidth="251.0" rotate="-57.1" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 100 0 0;" />
+            <Pane layoutX="-7.0" layoutY="410.0" opacity="0.83" prefHeight="247.0" prefWidth="215.0" rotate="143.5" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <Pane layoutX="734.0" layoutY="84.0" opacity="0.83" prefHeight="264.0" prefWidth="240.0" rotate="40.4" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 100 0 100;" />
+            <Label layoutX="148.0" layoutY="126.0" text="ID:" textFill="#111010d9">
+               <font>
+                  <Font name="Sitka Small Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="181.0" text="Dirección:">
+               <font>
+                  <Font name="Sitka Small Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="126.0" text="Teléfono:">
+               <font>
+                  <Font name="Sitka Small Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" disable="true" editable="false" layoutX="244.0" layoutY="126.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextField fx:id="txtDireccion" editable="false" layoutX="239.0" layoutY="177.0" prefHeight="25.0" prefWidth="469.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="txtTelefono" editable="false" layoutX="556.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TableView fx:id="tblAdministracion" layoutX="87.0" layoutY="227.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="276.0" prefWidth="679.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="133.0" text="id" />
+                <TableColumn fx:id="colDireccion" prefWidth="321.0" sortType="DESCENDING" text="Dirección" />
+                  <TableColumn fx:id="colTelefono" minWidth="5.0" prefWidth="214.0" text="Teléfono" />
+              </columns>
+            </TableView>
+            <Pane layoutX="117.0" layoutY="-155.0" opacity="0.83" prefHeight="247.0" prefWidth="251.0" rotate="135.0" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <Button layoutX="123.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaCargos" prefHeight="35.0" prefWidth="133.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Cargos" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/cargos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="260.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaTipoClientes" prefHeight="35.0" prefWidth="207.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Tipos de Clientes" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/TipoClienteIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="473.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaDepartamentos" prefHeight="35.0" prefWidth="194.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Departamentos" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/DepartamentoIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="672.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaLocales" prefHeight="35.0" prefWidth="125.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Locales" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/LocalesIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="8.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaMenuPrincipal" prefHeight="30.0" prefWidth="117.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Regresar" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/atras.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-23.0" prefHeight="563.0" prefWidth="244.0" style="-fx-background-color: #0B0B3B;">
+         <children>
+            <VBox alignment="CENTER" layoutX="61.0" layoutY="258.0" prefHeight="273.0" prefWidth="149.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Nuevo" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Eliminar" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#editar" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Editar" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#reporte" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Reporte" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="40.0" layoutY="20.0" prefHeight="220.0" prefWidth="190.0" style="-fx-background-color: #DCDCDC; -fx-background-radius: 50 50 50 50;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="18.0" layoutY="-8.0" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="ADMINISTRACIÓN" textFill="#141312">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Administracion.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

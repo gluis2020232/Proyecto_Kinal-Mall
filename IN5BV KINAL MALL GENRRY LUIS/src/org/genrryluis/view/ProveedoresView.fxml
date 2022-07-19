@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="560.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.genrryluis.controller.ProveedoresController">
+   <children>
+      <Pane layoutX="209.0" prefHeight="560.0" prefWidth="856.0" style="-fx-background-color: #D3E1EB;">
+         <children>
+            <Pane layoutX="117.0" layoutY="-155.0" opacity="0.83" prefHeight="247.0" prefWidth="251.0" rotate="135.0" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <Pane layoutX="369.0" layoutY="464.0" opacity="0.83" prefHeight="247.0" prefWidth="251.0" rotate="-57.1" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <Pane layoutX="-7.0" layoutY="410.0" opacity="0.83" prefHeight="247.0" prefWidth="215.0" rotate="143.5" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <TableView fx:id="tblProveedores" layoutX="60.0" layoutY="235.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="257.0" prefWidth="768.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="56.0" text="Id" />
+                <TableColumn fx:id="colServicioPrestado" prefWidth="116.66668701171875" text="Servicio Prestado" />
+                  <TableColumn fx:id="colTelefono" minWidth="5.0" prefWidth="90.33331298828125" text="Teléfono" />
+                  <TableColumn fx:id="colDireccion" prefWidth="161.0" text="Dirección" />
+                  <TableColumn fx:id="colNit" minWidth="5.0" prefWidth="88.0" text="Nit" />
+                  <TableColumn fx:id="colSaldoFavor" minWidth="5.0" prefWidth="148.0" text="Saldo a Favor" />
+                  <TableColumn fx:id="colSaldoContra" minWidth="5.0" prefWidth="114.99993896484375" text="Saldo Encontra" />
+              </columns>
+            </TableView>
+            <Pane layoutX="-200.0" layoutY="4.0" opacity="0.83" prefHeight="491.0" prefWidth="171.0" rotate="-130.2" style="-fx-background-color: DCDCDC; -fx-background-radius: 0 80 0 80;" />
+            <GridPane layoutX="65.0" layoutY="94.0" prefHeight="120.0" prefWidth="759.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="txtId" disable="true" editable="false" prefHeight="25.0" prefWidth="277.0" GridPane.columnIndex="1" />
+                  <Label text="ID:">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Servicio Prestado:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtServicioPrestado" editable="false" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Teléfono:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTelefono" editable="false" prefHeight="25.0" prefWidth="273.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Dirección:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDireccion" editable="false" prefHeight="25.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Nit:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Saldo a Favor:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Saldo Encontra:" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Sitka Small Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSaldoContra" editable="false" prefHeight="25.0" prefWidth="232.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtSaldoFavor" editable="false" prefHeight="25.0" prefWidth="232.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNit" editable="false" prefHeight="25.0" prefWidth="232.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Button layoutX="24.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaMenuPrincipal" prefHeight="30.0" prefWidth="117.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Regresar" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/atras.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#mostrarVistaCuentasPorPagar" prefHeight="35.0" prefWidth="234.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Cuentas por Pagar" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/CuentasPorCobrar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-23.0" prefHeight="560.0" prefWidth="246.0" style="-fx-background-color: #0B0B3B;">
+         <children>
+            <VBox alignment="CENTER" layoutX="68.0" layoutY="245.0" prefHeight="273.0" prefWidth="149.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Nuevo" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Eliminar" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#editar" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Editar" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#reporte" prefHeight="70.0" prefWidth="200.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Reporte" textFill="#f5f2f2">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="35.0" layoutY="8.0" prefHeight="220.0" prefWidth="183.0" style="-fx-background-color: #DCDCDC; -fx-background-radius: 50 50 50 50;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="12.0" layoutY="-11.0" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="108.0" text="PROVEEDORES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/proveedor.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

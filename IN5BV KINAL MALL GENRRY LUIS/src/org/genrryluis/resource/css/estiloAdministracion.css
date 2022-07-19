@@ -1,0 +1,15 @@
+
+.buttons {
+    -fx-background-radius: 550 250 550 250;
+    -fx-background-color: #0A0A34;
+}
+
+.buttons:hover {
+   -fx-background-radius:  550 250 550 250;
+    -fx-background-color: #ED6F14; /*A poner el cursor sobre el Item que aplique un estilo  */
+}
+
+.hboxCrud:hover {
+    -fx-background-radius:  30 30 30 30;
+    -fx-background-color: #E64925;
+}

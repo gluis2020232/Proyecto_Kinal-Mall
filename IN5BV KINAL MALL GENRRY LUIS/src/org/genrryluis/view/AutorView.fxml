@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.genrryluis.controller.AutorController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/55.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="391.0" layoutY="79.0" text="ACERCA DEL AUTOR" textFill="#fcfaf9">
+         <font>
+            <Font name="Bodoni MT Condensed" size="51.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="291.0" fitWidth="287.0" layoutX="62.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/miFoto.jpg" />
+         </image></ImageView>
+      <Label layoutX="435.0" layoutY="291.0" text="Jornada:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font></Label>
+      <Label layoutX="530.0" layoutY="155.0" text="Genrry Uwualdo Luis Alvarado" textFill="#fcf8f8">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="523.0" layoutY="200.0" prefHeight="30.0" prefWidth="182.0" text="Quinto Informática" textFill="#eee8e8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="526.0" layoutY="242.0" text="B" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="537.0" layoutY="289.0" text="Vespertina" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="433.0" layoutY="156.0" text="Nombre:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="205.0" text="Grado:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="243.0" text="Sección:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="346.0" text="Carnet:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="346.0" text="2020232" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="395.0" text="Email:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="438.0" text="Código Académico:" textFill="#85eee7">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="393.0" text="luisgenrry3@gmail.com" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="608.0" layoutY="438.0" text="PE5BV" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#regresar" prefHeight="30.0" prefWidth="117.0" styleClass="buttons" stylesheets="@../resource/css/estiloAdministracion.css" text="Regresar" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/atras.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

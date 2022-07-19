@@ -1,0 +1,31 @@
+/* 
+    Created on : 13-may-2021, 15:26:46
+    Author     : Genrry Luis
+*/
+
+.menu-bar { 
+    -fx-background-color: #A3E4D7; /*Para el fondo del Menu Item*/
+    /*-fx-opacity: 0.9;*/
+
+} 
+
+.menu-bar .label { 
+    /*-fx-text-fill: white; /*Para cambiar el color del texto*/
+    -fx-font-size: 17; /*Para cambiar el tamaño del texto*/
+    -fx-font-weight: bold; /*Para ponerlo en Negrita*/
+    /*-fx-font-family: "Arial Rounded MT Negrita"; /*Para cambiar el tipo de letra*/
+}
+
+.menu-bar .menu-button:hover {
+    -fx-background-color:darkgrey; /*A poner el cursor sobre el Item que aplique un estilo  */
+}
+
+.menu-bar .menu-button:hover {
+    -fx-text-fill: white; 
+}
+
+.menu-item:hover {
+    -fx-backgroud-color:black;
+    -fx-opacity: 0.7;
+}
+/**/

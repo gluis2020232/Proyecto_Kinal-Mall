@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProveedores" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc234816-d6de-4c23-9d87-508385fc4620">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<parameter name="LOGO_FOOTER" class="java.io.InputStream"/>
+	<parameter name="LOGO_DETAIL" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT * FROM Proveedores]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="servicioPrestado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="direccion_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{direccion}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="27" uuid="8678b7fd-01c1-4838-b151-2ac931bf988f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="27" width="555" height="18" uuid="8db85810-16c7-4497-81ae-c8fe3161726e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6A Avenida 13-54, Colonia Landivar, Zona 7, Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="20" uuid="e3207dd4-3b88-4556-8cf5-6ea225d26026"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono: 22060000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="555" height="20" uuid="660d6900-0386-477b-97be-8806100daacc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIT: 5696565-7]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="442" y="96" width="100" height="20" uuid="fa749d6f-67b7-4bdd-a3b6-f78cb0d19404"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="468" y="0" width="141" height="86" uuid="bfc7f4a2-8301-4c7e-b7b6-0d2dbd6cb394"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-21" y="-17" width="200" height="82" uuid="d98e6b18-5950-425e-ac8f-f1e0bd7a84fa"/>
+				<imageExpression><![CDATA[$P{LOGO_DETAIL}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44">
+			<staticText>
+				<reportElement x="52" y="0" width="451" height="36" uuid="4d07a848-27a1-4dd7-a830-38124f147dc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PROVEEDORES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="37" width="554" height="1" uuid="d946d3e5-2650-4198-850d-947f274e8c01"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="13" y="0" width="26" height="20" uuid="8ad89c92-1f6c-4e4a-b7c5-d1bed6e4c5a7"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="0" width="60" height="20" uuid="490dd7c2-2775-4932-85d8-73bba9c04973"/>
+				<text><![CDATA[Nit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="100" height="20" uuid="fd2d6723-47ab-4e1a-8bdb-ca008f9d2b0c"/>
+				<text><![CDATA[ServicioPrestado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="0" width="76" height="20" uuid="ba0fd129-46d0-435f-84f4-94d56e5cdb85"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="100" height="20" uuid="71962081-d5d1-4ad5-b412-de6ccd52173d"/>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="79" height="20" uuid="55a83dc2-94bb-4636-b0f0-12fbc26b257b"/>
+				<text><![CDATA[SaldoFavor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="0" width="64" height="20" uuid="befbfc7e-70f6-44a4-8a8e-60916168996f"/>
+				<text><![CDATA[SaldoContra]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50">
+			<textField>
+				<reportElement x="13" y="14" width="26" height="20" uuid="76bf5c84-41b2-40d8-94f1-a17115fb3c44"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="14" width="60" height="20" uuid="8c5b8c36-031c-4642-954a-558640e8d7cd"/>
+				<textFieldExpression><![CDATA[$F{nit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="14" width="100" height="20" uuid="c1ae2f88-f6c7-470d-9689-d0fb672b272d"/>
+				<textFieldExpression><![CDATA[$F{servicioPrestado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="14" width="75" height="20" uuid="bb5a34cd-2db2-4238-bc1c-c0f087eba657"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="14" width="100" height="20" uuid="7ae0a8ef-76a6-4c23-aaa0-42349591bb02"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="14" width="79" height="20" uuid="03a467e5-7456-4ae5-9740-62402d654513"/>
+				<textFieldExpression><![CDATA[$F{saldoFavor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="14" width="54" height="20" uuid="3e09a530-a820-44e2-b8a0-643fb162d252"/>
+				<textFieldExpression><![CDATA[$F{saldoContra}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="96">
+			<staticText>
+				<reportElement x="1" y="12" width="555" height="63" forecolor="#000000" uuid="cecce3a7-264a-4c51-95e4-c5ff223ac8c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Genrry Uwualdo Luis Alvarado
+gluis-2020232@kinal.edu.gt
+IN5BV]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<image>
+				<reportElement x="101" y="14" width="454" height="51" uuid="9a332d89-40ab-4921-8b24-bd4d579c4a15"/>
+				<imageExpression><![CDATA[$P{LOGO_FOOTER}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="1" y="45" width="100" height="20" uuid="4b7b3320-4ec5-4dde-9b67-868c30033bd9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
